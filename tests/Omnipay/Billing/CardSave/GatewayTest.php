@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Tala Payments package.
+ * This file is part of the Omnipay package.
  *
  * (c) Adrian Macneil <adrian@adrianmacneil.com>
  *
@@ -9,18 +9,18 @@
  * file that was distributed with this source code.
  */
 
-namespace Tala\Billing\CardSave;
+namespace Omnipay\Billing\CardSave;
 
 use Mockery as m;
-use Tala\CreditCard;
-use Tala\BaseGatewayTest;
-use Tala\Request;
+use Omnipay\CreditCard;
+use Omnipay\BaseGatewayTest;
+use Omnipay\Request;
 
 class GatewayTest extends BaseGatewayTest
 {
     public function setUp()
     {
-        $this->httpClient = m::mock('\Tala\HttpClient\HttpClientInterface');
+        $this->httpClient = m::mock('\Omnipay\HttpClient\HttpClientInterface');
         $this->httpRequest = m::mock('\Symfony\Component\HttpFoundation\Request');
 
         $this->gateway = new Gateway($this->httpClient, $this->httpRequest);
@@ -47,7 +47,7 @@ class GatewayTest extends BaseGatewayTest
 
         $response = $this->gateway->purchase($this->options);
 
-        $this->assertInstanceOf('\Tala\Billing\CardSave\Response', $response);
+        $this->assertInstanceOf('\Omnipay\Billing\CardSave\Response', $response);
         $this->assertTrue($response->isSuccessful());
         $this->assertEquals('130114063233159001702222', $response->getGatewayReference());
     }

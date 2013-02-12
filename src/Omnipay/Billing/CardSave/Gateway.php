@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Tala Payments package.
+ * This file is part of the Omnipay package.
  *
  * (c) Adrian Macneil <adrian@adrianmacneil.com>
  *
@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace Tala\Billing\CardSave;
+namespace Omnipay\Billing\CardSave;
 
 use SimpleXMLElement;
 use DOMDocument;
-use Tala\AbstractGateway;
-use Tala\Exception;
-use Tala\Exception\InvalidResponseException;
-use Tala\FormRedirectResponse;
-use Tala\Request;
+use Omnipay\AbstractGateway;
+use Omnipay\Exception;
+use Omnipay\Exception\InvalidResponseException;
+use Omnipay\FormRedirectResponse;
+use Omnipay\Request;
 
 /**
  * CardSave Gateway
