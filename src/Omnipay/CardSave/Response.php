@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Omnipay\Billing\CardSave;
+namespace Omnipay\CardSave;
 
-use Omnipay\AbstractResponse;
+use Omnipay\Common\AbstractResponse;
 
 /**
  * CardSave Response

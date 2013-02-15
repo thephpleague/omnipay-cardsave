@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Omnipay\Billing\CardSave;
+namespace Omnipay\CardSave;
 
-use Omnipay\CreditCard;
+use Omnipay\Common\CreditCard;
 use Omnipay\GatewayTestCase;
 
 class GatewayTest extends GatewayTestCase
@@ -42,7 +42,7 @@ class GatewayTest extends GatewayTestCase
 
         $response = $this->gateway->purchase($this->options);
 
-        $this->assertInstanceOf('\Omnipay\Billing\CardSave\Response', $response);
+        $this->assertInstanceOf('\Omnipay\CardSave\Response', $response);
         $this->assertTrue($response->isSuccessful());
         $this->assertEquals('130215141054377801316798', $response->getGatewayReference());
     }

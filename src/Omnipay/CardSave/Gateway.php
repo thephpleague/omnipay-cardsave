@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace Omnipay\Billing\CardSave;
+namespace Omnipay\CardSave;
 
 use SimpleXMLElement;
 use DOMDocument;
-use Omnipay\AbstractGateway;
+use Omnipay\Common\AbstractGateway;
 use Omnipay\Exception;
-use Omnipay\Exception\InvalidResponseException;
-use Omnipay\FormRedirectResponse;
-use Omnipay\Request;
+use Omnipay\Common\Exception\InvalidResponseException;
+use Omnipay\Common\FormRedirectResponse;
+use Omnipay\Common\Request;
 
 /**
  * CardSave Gateway

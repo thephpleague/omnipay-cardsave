@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Omnipay\Billing\CardSave;
+namespace Omnipay\CardSave;
 
 use SimpleXmlElement;
 use Omnipay\TestCase;
