@@ -3,7 +3,7 @@
 namespace Omnipay\CardSave\Message;
 
 use Mockery as m;
-use Omnipay\TestCase;
+use Omnipay\Tests\TestCase;
 
 class ResponseTest extends TestCase
 {
