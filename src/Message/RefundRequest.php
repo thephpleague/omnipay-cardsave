@@ -10,6 +10,7 @@ use SimpleXMLElement;
  */
 class RefundRequest extends PurchaseRequest
 {
+    public $transactionType = 'REFUND';
 
     public function getData()
     {
@@ -23,7 +24,8 @@ class RefundRequest extends PurchaseRequest
         $data->PaymentMessage->TransactionDetails['Amount'] = $this->getAmountInteger();
         $data->PaymentMessage->TransactionDetails['CurrencyCode'] = $this->getCurrencyNumeric();
         $data->PaymentMessage->TransactionDetails->OrderID = $this->getTransactionId();
-        $data->PaymentMessage->TransactionDetails->MessageDetails['TransactionType'] = 'REFUND';
+        $data->PaymentMessage->TransactionDetails->OrderDescription = $this->getDescription();
+        $data->PaymentMessage->TransactionDetails->MessageDetails['TransactionType'] = $this->transactionType;
         $data->PaymentMessage->TransactionDetails->MessageDetails['NewTransaction'] = false;
         $data->PaymentMessage->TransactionDetails->MessageDetails['CrossReference'] = $this->getTransactionReference();
 
